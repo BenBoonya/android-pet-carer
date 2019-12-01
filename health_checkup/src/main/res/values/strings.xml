@@ -5,4 +5,5 @@
     <string name="label_eye_checkup">Eye checkup</string>
     <string name="label_ear_checkup">Ear checkup</string>
     <string name="label_drop_checkup">Drop checkup</string>
+    <string name="label_paw_checkup">Paw checkup</string>
 </resources>

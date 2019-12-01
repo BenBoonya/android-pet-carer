@@ -30,9 +30,9 @@ class CheckUpViewModel @Inject constructor(
     fun onFabClicked() {
         viewModelScope.launch {
             isLoading.value = true
-            repeat(5) {
+            repeat(10) {
                 _captureCamera.call()
-                delay(1000)
+                delay(200)
             }
             isLoading.value = false
             processVisionObjects(firebaseVisionObjects)

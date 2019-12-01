@@ -231,5 +231,55 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/dropImageView" />
 
+        <ImageView
+            android:id="@+id/pawImageView"
+            android:layout_width="@dimen/health_checkup_icon_size"
+            android:layout_height="@dimen/health_checkup_icon_size"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/dropImageView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider5" />
+
+        <TextView
+            android:id="@+id/pawTextView"
+            style="@style/App.TitleText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center_vertical"
+            android:onClick="@{() -> viewModel.onCheckUpClicked()}"
+            android:text="@string/label_paw_checkup"
+            android:textColor="@color/greyContentTextColor"
+            app:layout_constraintBottom_toBottomOf="@id/pawImageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/pawImageView"
+            app:layout_constraintTop_toTopOf="@id/pawImageView" />
+
+
+        <ImageView
+            android:id="@+id/pawArrowImageView"
+            android:layout_width="@dimen/health_checkup_icon_size"
+            android:layout_height="@dimen/health_checkup_icon_size"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toTopOf="@id/divider6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@id/pawTextView"
+            app:layout_constraintTop_toBottomOf="@id/divider5"
+            app:srcCompat="@drawable/ic_arrow_right_dark" />
+
+        <View
+            android:id="@+id/divider6"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pawImageView" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
