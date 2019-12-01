@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.petcarer.android.features.health_checkup.ui.checkup_list.CheckUpListViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/closeImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()-> viewModel.onCloseClicked()}"
+            android:padding="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_close_dark" />
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/closeImageView" />
+
+        <ImageView
+            android:id="@+id/eyeImageView"
+            android:layout_width="@dimen/health_checkup_icon_size"
+            android:layout_height="@dimen/health_checkup_icon_size"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+        <TextView
+            android:id="@+id/eyeTextView"
+            style="@style/App.TitleText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center_vertical"
+            android:onClick="@{() -> viewModel.onCheckUpClicked()}"
+            android:text="@string/label_eye_checkup"
+            android:textColor="@color/greyContentTextColor"
+            app:layout_constraintBottom_toBottomOf="@id/eyeImageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/eyeImageView"
+            app:layout_constraintTop_toTopOf="@id/eyeImageView" />
+
+        <ImageView
+            android:id="@+id/eyeArrowImageView"
+            android:layout_width="@dimen/health_checkup_icon_size"
+            android:layout_height="@dimen/health_checkup_icon_size"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toTopOf="@id/divider2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@id/eyeTextView"
+            app:layout_constraintTop_toBottomOf="@id/divider1"
+            app:srcCompat="@drawable/ic_arrow_right_dark" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/eyeImageView" />
+
+        <ImageView
+            android:id="@+id/earImageView"
+            android:layout_width="@dimen/health_checkup_icon_size"
+            android:layout_height="@dimen/health_checkup_icon_size"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/eyeImageView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+        <TextView
+            android:id="@+id/earTextView"
+            style="@style/App.EditText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center_vertical"
+            android:onClick="@{() -> viewModel.onCheckUpClicked()}"
+            android:text="@string/label_ear_checkup"
+            android:textColor="@color/greyContentTextColor"
+            android:textSize="21sp"
+            app:layout_constraintBottom_toBottomOf="@id/earImageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/earImageView"
+            app:layout_constraintTop_toTopOf="@id/earImageView" />
+
+        <ImageView
+            android:id="@+id/earArrowImageView"
+            android:layout_width="@dimen/health_checkup_icon_size"
+            android:layout_height="@dimen/health_checkup_icon_size"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toTopOf="@id/divider3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@id/eyeTextView"
+            app:layout_constraintTop_toBottomOf="@id/divider2"
+            app:srcCompat="@drawable/ic_arrow_right_dark" />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/earImageView" />
+
+        <ImageView
+            android:id="@+id/noseImageView"
+            android:layout_width="@dimen/health_checkup_icon_size"
+            android:layout_height="@dimen/health_checkup_icon_size"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/eyeImageView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider3" />
+
+        <TextView
+            android:id="@+id/noseTextView"
+            style="@style/App.TitleText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center_vertical"
+            android:onClick="@{() -> viewModel.onCheckUpClicked()}"
+            android:text="@string/label_nose_checkup"
+            android:textColor="@color/greyContentTextColor"
+            app:layout_constraintBottom_toBottomOf="@id/noseImageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/noseImageView"
+            app:layout_constraintTop_toTopOf="@id/noseImageView" />
+
+        <ImageView
+            android:id="@+id/noseArrowImageView"
+            android:layout_width="@dimen/health_checkup_icon_size"
+            android:layout_height="@dimen/health_checkup_icon_size"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toTopOf="@id/divider3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@id/dropTextView"
+            app:layout_constraintTop_toBottomOf="@id/divider4"
+            app:srcCompat="@drawable/ic_arrow_right_dark" />
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/noseImageView" />
+
+        <ImageView
+            android:id="@+id/dropImageView"
+            android:layout_width="@dimen/health_checkup_icon_size"
+            android:layout_height="@dimen/health_checkup_icon_size"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/eyeImageView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider4" />
+
+        <TextView
+            android:id="@+id/dropTextView"
+            style="@style/App.TitleText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center_vertical"
+            android:onClick="@{() -> viewModel.onCheckUpClicked()}"
+            android:text="@string/label_drop_checkup"
+            android:textColor="@color/greyContentTextColor"
+            app:layout_constraintBottom_toBottomOf="@id/dropImageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/dropImageView"
+            app:layout_constraintTop_toTopOf="@id/dropImageView" />
+
+
+        <ImageView
+            android:id="@+id/dropArrowImageView"
+            android:layout_width="@dimen/health_checkup_icon_size"
+            android:layout_height="@dimen/health_checkup_icon_size"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toTopOf="@id/divider4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@id/dropTextView"
+            app:layout_constraintTop_toBottomOf="@id/divider5"
+            app:srcCompat="@drawable/ic_arrow_right_dark" />
+
+        <View
+            android:id="@+id/divider5"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dropImageView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,13 @@
+dependencies {
+    testImplementation project(':library_test_utils')
+
+    testImplementation "org.mockito:mockito-inline:${test_versions.mockito}"
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:${test_versions.mockito_kotlin}"
+    testImplementation "android.arch.core:core-testing:${test_versions.androidx_test}"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:${versions.coroutines}"
+    testImplementation "androidx.test:rules:${test_versions.androidx_test}"
+
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation "androidx.test.espresso:espresso-core:${test_versions.espresso}"
+    androidTestImplementation "com.android.support.test:runner:${test_versions.test_runner}"
+}

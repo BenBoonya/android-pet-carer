@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_no_health_record">No health records!</string>
+    <string name="label_nose_checkup">Nose Checkup</string>
+    <string name="label_eye_checkup">Eye checkup</string>
+    <string name="label_ear_checkup">Ear checkup</string>
+    <string name="label_drop_checkup">Drop checkup</string>
+</resources>

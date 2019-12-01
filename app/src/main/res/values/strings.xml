@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PetCarer</string>
+    <string name="label_pet_list">My Pets</string>
+    <string name="label_health_checkup">Health</string>
+    <string name="label_setting">Setting</string>
+    <string name="title_mypets">My Pets</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_about">About</string>
+</resources>

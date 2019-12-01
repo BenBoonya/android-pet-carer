@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/health_checkup_nav_graph"
+    app:startDestination="@id/checkUpListFragment">
+
+    <fragment
+        android:id="@+id/healthCheckUpFragment"
+        android:name="com.petcarer.android.features.health_checkup.ui.health_checkup.HealthCheckUpFragment"
+        android:label="HealthCheckUpFragment">
+        <action
+            android:id="@+id/action_healthCheckUpFragment_to_checkUpListFragment"
+            app:destination="@id/checkUpListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkUpListFragment"
+        android:name="com.petcarer.android.features.health_checkup.ui.checkup_list.CheckUpListFragment"
+        android:label="CheckUpListFragment">
+        <action
+            android:id="@+id/action_checkUpListFragment_to_noseCheckupFragment"
+            app:destination="@id/noseCheckupFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/noseCheckupFragment"
+        android:name="com.petcarer.android.features.health_checkup.ui.checkup.CheckupFragment"
+        android:label="NoseCheckupFragment" />
+</navigation>

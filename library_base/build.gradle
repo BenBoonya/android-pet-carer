@@ -1,0 +1,66 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion versions.compile_sdk
+    buildToolsVersion versions.build_tool
+
+    defaultConfig {
+        minSdkVersion versions.min_sdk
+        targetSdkVersion versions.target_sdk
+        versionCode version_code
+        versionName version_name
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
+    api "androidx.appcompat:appcompat:${versions.appcompat}"
+    api "androidx.core:core-ktx:${versions.core_ktx}"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.coroutines}"
+    api "androidx.fragment:fragment-ktx:${versions.fragment_ktx}"
+
+    api "com.google.dagger:dagger:${versions.dagger}"
+    api "com.google.dagger:dagger-android:${versions.dagger}"
+    api "com.google.dagger:dagger-android-support:${versions.dagger}"
+    api "android.arch.lifecycle:extensions:${versions.lifecycle}"
+    api "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycle_viewmodel_ktx}"
+    kapt "androidx.lifecycle:lifecycle-compiler:2.1.0"
+    api "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0-alpha01"
+
+    api "io.coil-kt:coil:${versions.coil}"
+
+    kapt "com.google.dagger:dagger-compiler:${versions.dagger}"
+    kapt "com.google.dagger:dagger-android-processor:${versions.dagger}"
+
+    api "androidx.constraintlayout:constraintlayout:1.1.3"
+    api "androidx.coordinatorlayout:coordinatorlayout:1.0.0"
+    api "androidx.recyclerview:recyclerview:1.0.0"
+    api "androidx.cardview:cardview:1.0.0"
+    api "com.google.android.material:material:${versions.material}"
+    api "androidx.navigation:navigation-fragment-ktx:${versions.navigation}"
+    api "androidx.navigation:navigation-ui-ktx:${versions.navigation}"
+
+    api "com.google.code.gson:gson:2.8.6"
+    api "com.squareup.retrofit2:converter-gson:2.6.2"
+    api "com.squareup.retrofit2:retrofit:2.6.2"
+    api "com.squareup.okhttp3:logging-interceptor:4.2.2"
+
+    api 'com.firebaseui:firebase-ui-firestore:6.1.0'
+    api 'com.google.firebase:firebase-auth:19.1.0'
+
+    api "com.google.firebase:firebase-analytics:${versions.firebase_analytic}"
+}

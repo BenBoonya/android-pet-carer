@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="App.Button.Accent" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontFamily">@font/kanit</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="App.DefaultText" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/kanit</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="App.ContentText" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/kanit</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="App.TitleText" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/kanit</item>
+        <item name="android:textSize">21sp</item>
+    </style>
+
+    <style name="App.EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:fontFamily">@font/kanit</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="FullScreenDialog">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+
+</resources>

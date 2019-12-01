@@ -1,0 +1,2 @@
+include ':app', ':library_base', ':library_test_utils', ':settings', ':health_checkup'
+rootProject.name='petcarer'

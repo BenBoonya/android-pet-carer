@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/my_pets_nav_graph"
+        android:icon="@drawable/ic_list_white"
+        android:title="@string/label_pet_list" />
+    <item
+        android:id="@+id/health_checkup_nav_graph"
+        android:icon="@drawable/ic_list_check"
+        android:title="@string/label_health_checkup" />
+    <item
+        android:id="@+id/settings_nav_graph"
+        android:icon="@drawable/ic_settings_white"
+        android:title="@string/label_setting" />
+</menu>
