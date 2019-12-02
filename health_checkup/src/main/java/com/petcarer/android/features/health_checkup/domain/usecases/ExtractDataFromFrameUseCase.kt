@@ -1,4 +1,4 @@
-package com.petcarer.android.features.health_checkup.usecases
+package com.petcarer.android.features.health_checkup.domain.usecases
 
 import com.google.firebase.ml.vision.FirebaseVision
 import com.google.firebase.ml.vision.common.FirebaseVisionImage

@@ -6,7 +6,7 @@ import com.boonya.android.library_base.base.BaseViewModel
 import com.boonya.android.library_base.data.livedata.SingleLiveEvent
 import com.google.firebase.ml.vision.objects.FirebaseVisionObject
 import com.otaliastudios.cameraview.PictureResult
-import com.petcarer.android.features.health_checkup.usecases.ExtractDataFromFrameUseCase
+import com.petcarer.android.features.health_checkup.domain.usecases.ExtractDataFromFrameUseCase
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import javax.inject.Inject
