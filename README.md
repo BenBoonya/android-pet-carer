@@ -1,9 +1,7 @@
 # Tell us what your idea is.
 
 We develop a mobile application called ​ **Pet Carer​**. It is a health observation and diagnosis service
-for pet owners. Being healthy is essential for every living thing, including animals who cannot tell us that
-
-they are sick. Recently, our first beloved pet passed away because we lack the knowledge to perform
+for pet owners. Being healthy is essential for every living thing, including animals who cannot tell us that they are sick. Recently, our first beloved pet passed away because we lack the knowledge to perform
 observation and evaluation on her efficiently. We do not want this tragedy to happen again to every pet lover or us.
 
 Performing health-checkup on pets regularly can help to prevent unpredictable tragedies from
@@ -16,7 +14,7 @@ perform initial diagnosis by yourself as well as help the vets to understand you
 The ​ **on-device machine** makes pet health-checkup by mobile applications possible. Pet Carer
 application performs five necessary checks, including an observation on the respiratory organs, eyes, ears,
 paws, and drops separately. The app uses photos and videos related to each inspection combining with
-pet's physical information, such as weight records as inputs to our machine learning model to determine
+pet's physical information, such as weight records as inputs to our machine learning models to determine
 the healthiness result of each check. The diagnosis will work seamlessly with no latency, even without an internet connection, and the user can choose to keep the diagnosis information secret.
 
 We plan to make the application for supporting guinea pigs first then expand the service to other
@@ -48,7 +46,7 @@ This link is the guinea pig-related research paper that is very beneficial for t
 process.
 <https://www.researchgate.net/publication/280246223_Diseases_in_pet_guinea_pigs_a_retrospective_study_in_1000_animals>
 2. Mentorship to efficiently train the model to recognize problems or symptoms of the
-image of specific are of pets.
+image of specific area of pets.
 3. Reach more audiences to gain more feedback from the real user for improving the
 application.
 
@@ -75,7 +73,7 @@ We will gain the users, analyze the application performance, and improve the app
 from the users' feedback.
 
 ##### After May 2020
-We must maintain the application and plan to develop the new feature for serving the
+We must maintain the application and plan to develop the new features for serving the
 existing users and gaining new coming users.
 
 The detail of the project timeline is in this below link.
@@ -88,7 +86,7 @@ of your other projects so we can get an idea of how we can assist you with your 
 
 My name is Boonya Kipitak, responsible for developing the Android application for the team. I'm an
 Android developer and Machine learning enthusiast based in Thailand. I have been working with Android
-development in the professional environment for more than four years. Here are links to the google play store of the apps that I have taken part in from the ground up.
+development in the professional environment for more than four years. Here are links to the google play store of some of the apps that I have taken part in from the ground up.
 
 - <https://play.google.com/store/apps/details?id=com.minor.pizzacompany>
 - <https://play.google.com/store/apps/details?id=com.minorfoodgroup.one1112.one>
