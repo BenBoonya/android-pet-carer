@@ -7,12 +7,14 @@ import com.boonya.android.library_base.data.livedata.SingleLiveEvent
 import com.google.firebase.ml.vision.objects.FirebaseVisionObject
 import com.otaliastudios.cameraview.PictureResult
 import com.petcarer.android.features.health_checkup.domain.usecases.ExtractDataFromFrameUseCase
+import com.petcarer.android.features.health_checkup.domain.usecases.GetFirebaseModelInterpreterUseCase
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class CheckUpViewModel @Inject constructor(
-    private val extractDataFromFrameUseCase: ExtractDataFromFrameUseCase
+    private val extractDataFromFrameUseCase: ExtractDataFromFrameUseCase,
+    private val getFirebaseModelInterpreterUseCase: GetFirebaseModelInterpreterUseCase
 ) : BaseViewModel() {
 
     val _closeDialog = SingleLiveEvent<Any>()

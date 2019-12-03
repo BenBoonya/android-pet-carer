@@ -5,11 +5,12 @@ import com.google.firebase.ml.common.modeldownload.FirebaseModelManager
 import com.google.firebase.ml.custom.FirebaseCustomRemoteModel
 import com.google.firebase.ml.custom.FirebaseModelInterpreter
 import com.google.firebase.ml.custom.FirebaseModelInterpreterOptions
+import javax.inject.Inject
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
 
-class GetFirebaseModelInterpreterUseCase() {
+class GetFirebaseModelInterpreterUseCase @Inject constructor() {
 
     suspend operator fun invoke(): FirebaseModelInterpreter? {
         return suspendCoroutine { cont ->
