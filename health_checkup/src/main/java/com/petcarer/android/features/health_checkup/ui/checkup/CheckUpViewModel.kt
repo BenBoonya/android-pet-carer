@@ -29,6 +29,14 @@ class CheckUpViewModel @Inject constructor(
         _closeDialog.call()
     }
 
+    fun initilizeModelIntepreter() {
+        viewModelScope.launch {
+            isLoading.postValue(true)
+            val modelInterpreter = getFirebaseModelInterpreterUseCase()
+            isLoading.postValue(false)
+        }
+    }
+
     fun onFabClicked() {
         viewModelScope.launch {
             isLoading.value = true
