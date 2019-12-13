@@ -4,8 +4,10 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.boonya.android.library_base.base.BaseViewModel
 import com.boonya.android.library_base.data.livedata.SingleLiveEvent
+import com.google.firebase.ml.custom.FirebaseModelInterpreter
 import com.google.firebase.ml.vision.objects.FirebaseVisionObject
 import com.otaliastudios.cameraview.PictureResult
+import com.petcarer.android.features.health_checkup.domain.usecases.ConvertBitmapToByteBufferUseCase
 import com.petcarer.android.features.health_checkup.domain.usecases.ExtractDataFromFrameUseCase
 import com.petcarer.android.features.health_checkup.domain.usecases.GetFirebaseModelInterpreterUseCase
 import kotlinx.coroutines.delay
@@ -14,8 +16,15 @@ import javax.inject.Inject
 
 class CheckUpViewModel @Inject constructor(
     private val extractDataFromFrameUseCase: ExtractDataFromFrameUseCase,
-    private val getFirebaseModelInterpreterUseCase: GetFirebaseModelInterpreterUseCase
+    private val getFirebaseModelInterpreterUseCase: GetFirebaseModelInterpreterUseCase,
+    private val convertBitmapToByteBufferUseCase: ConvertBitmapToByteBufferUseCase
 ) : BaseViewModel() {
+
+    private var modelInterpreter: FirebaseModelInterpreter? = null
+
+    init {
+        initializeModelInterpreter()
+    }
 
     val _closeDialog = SingleLiveEvent<Any>()
 
@@ -29,10 +38,10 @@ class CheckUpViewModel @Inject constructor(
         _closeDialog.call()
     }
 
-    fun initilizeModelIntepreter() {
+    private fun initializeModelInterpreter() {
         viewModelScope.launch {
             isLoading.postValue(true)
-            val modelInterpreter = getFirebaseModelInterpreterUseCase()
+            modelInterpreter = getFirebaseModelInterpreterUseCase()
             isLoading.postValue(false)
         }
     }
@@ -50,11 +59,7 @@ class CheckUpViewModel @Inject constructor(
     }
 
     fun extractDataFromFrame(pictureResult: PictureResult) {
-        extractDataFromFrameUseCase(
-            pictureResult,
-            this::onExtractDataSuccess,
-            this::onExtractDataFailure
-        )
+
     }
 
     fun onExtractDataSuccess(objects: List<FirebaseVisionObject>) {
